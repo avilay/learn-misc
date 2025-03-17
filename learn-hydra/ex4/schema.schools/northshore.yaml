@@ -1,0 +1,3 @@
+district: string
+name: text
+capacity: integer

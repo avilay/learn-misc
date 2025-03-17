@@ -1,0 +1,6 @@
+name: binclass
+datadir: generated/binclass/1M
+hparams:
+  epochs: 3
+  batch_size: 32
+  lr: 0.01

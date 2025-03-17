@@ -1,0 +1,7 @@
+# This config is telling hydra where to find the component configs. db: mysql means hydra
+# will look for ./db/mysql.yaml file and use all the config in there under the db namespace.
+# So the driver config in ./db/mysql.yaml can be accessed as db.driver and so on.
+defaults:
+  - db: mysql
+  - ui: full
+  - schema: school

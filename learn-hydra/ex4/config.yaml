@@ -1,0 +1,16 @@
+defaults:
+  - schema/schools: northshore
+  # - schema.schools: northshore
+  # - schema:
+  #     schools: northshore
+
+db:
+  driver: mysql
+  user: aptg
+  password: secret
+
+schema:
+  database: education
+  students:
+    name: string
+    grade: int

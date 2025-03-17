@@ -1,0 +1,3 @@
+create_db: false
+view: true
+platform: osx

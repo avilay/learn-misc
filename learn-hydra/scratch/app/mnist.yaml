@@ -1,0 +1,7 @@
+name: mnist
+datadir: mnist
+hparams:
+  epochs: 3
+  batch_size: 128
+  lr: 0.001
+  momentum: 0.9

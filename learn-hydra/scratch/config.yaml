@@ -1,0 +1,19 @@
+defaults:
+  - app: mnist
+  - _self_
+
+cmd: ???
+log_frequency: 1
+dataroot: /home/avilay/mldata
+
+eval_checkpoint: ???
+
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: /Users/avilay/mlruns/${app.name}/${now:%Y-%m-%d}/${now:%H-%M}
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(levelname)s] - %(message)s'

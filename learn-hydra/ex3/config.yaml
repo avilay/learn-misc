@@ -1,0 +1,7 @@
+defaults:
+  - ui: osx
+
+db:
+  driver: mysql
+  user: aptg
+  password: secret

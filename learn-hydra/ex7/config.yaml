@@ -1,0 +1,6 @@
+app:
+  name: ddp-binclass-app
+
+hydra:
+  run:
+    dir: /Users/avilay/mlruns/${app.name}/${now:%Y-%m-%d_%H-%M}

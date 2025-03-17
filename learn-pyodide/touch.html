@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pyodide Pygame Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .demo {
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .demo-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: 20px;
+        }
+
+        .demo-content {
+            padding: 20px;
+        }
+
+        #canvas {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        const program = `
+import pygame
+import asyncio
+
+SCREENRECT = pygame.Rect(0, 0, 640, 480)
+
+async def main():
+    print("Async main started.")
+    pygame.mixer.pre_init(4410, 32, 2, 1024)
+    pygame.init()
+    fullscreen = False
+    winstyle = 0
+    screen = pygame.display.set_mode(SCREENRECT.size, winstyle)
+
+    # Create a player object
+    player = pygame.Surface((50, 50))
+    player.fill((255, 0, 0))
+
+    # Set the initial position of the player
+    player_pos = [175, 175]
+
+    screen.blit(player, player_pos)
+    pygame.display.update()
+
+    ticks = 0
+    while ticks < 30:
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_x, mouse_y = event.pos
+                player_pos[0] = mouse_x
+                player_pos[1] = mouse_y
+            elif event.type == pygame.FINGERDOWN:
+                print("Finger touched the screen")
+
+        screen.fill((0, 0, 0))
+        screen.blit(player, player_pos)
+        pygame.display.update()
+        ticks += 1
+        await asyncio.sleep(0.25)
+
+    print("Game loop ended")
+
+print("Pyodide Package Loaded")
+main()
+        `;
+        async function main() {
+            let pyodide = await loadPyodide();
+            await pyodide.loadPackage(["pygame-ce"], { checkIntegrity: false })
+            let canvas = document.getElementById("canvas");
+            pyodide.canvas.setCanvas2D(canvas);
+            pyodide.runPythonAsync(program);
+        }
+
+        main()
+    </script>
+
+    <div class="demo">
+        <div class="demo-header">Pyodide Experiments</div>
+    </div>
+
+    <div class="demo-content">
+    <canvas id="canvas"></canvas>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+# Instead of writing the hydra section below I can write it in a separate
+# file ./hydra/help/doc_help.yaml and then add the following setting here -
+# defaults:
+#   - override hydra/help: doc
+
+driver: mysql
+user: happy
+password: orange
+
+# hydra:
+#   help:
+#     app_name: DocDemo
+#     header: ==${hydra.help.app_name}==
+#     template: |-
+#       ${hydra.help.header}
+#       Config for this run is:
+#       -------
+#       $CONFIG
+#       -------
+#       Override any value. E.g., to override the default user -
+#       doc.py user=lala
+

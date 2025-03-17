@@ -1,0 +1,11 @@
+# Remember to have the extension .yaml instead of .yml. Hydra does
+# not recognize yml.
+# Config values can be interpolated - see https://hydra.cc/docs/tutorials/basic/your_first_app/using_config
+# for examples.
+# db:
+#   driver: mysql
+#   user: aptg
+#   password: secret
+driver: mysql
+user: aptg
+password: secret

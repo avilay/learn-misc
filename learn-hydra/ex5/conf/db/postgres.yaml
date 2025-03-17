@@ -1,0 +1,4 @@
+driver: postgresql
+user: cookie
+password: monster
+timeout: 10

@@ -1,0 +1,12 @@
+db:
+  driver: mysql
+  user: aptg
+  password: secret
+
+ui:
+  windows:
+    create_db: true
+    view: true
+  osx:
+    create_db: false
+    view: true
