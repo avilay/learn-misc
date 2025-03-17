@@ -1,0 +1,1 @@
+/usr/bin/gcc -Wall -g CMakeFiles/netlearn.dir/main.c.o CMakeFiles/netlearn.dir/netutils.c.o CMakeFiles/netlearn.dir/stringutils.c.o -o netlearn

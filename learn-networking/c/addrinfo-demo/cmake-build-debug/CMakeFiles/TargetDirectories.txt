@@ -1,0 +1,3 @@
+/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/cmake-build-debug/CMakeFiles/netlearn.dir
+/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

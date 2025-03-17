@@ -1,0 +1,29 @@
+addrinfo has 3 parameters that I'd usually care about -
+x. ai_flags --> if I don't care about the exact IP address, OS can fill it for me
+1. ai_family --> IPv4, IPv6, or don't care
+2. ai_socktype --> streaming or datagram socket
+2. protocol --> This is really the same as type, it is tcp or udp depending on the socktype. Or just set it to 0 for the system to fill in based on socktype.
+3. ai_addrlen --> whatevs
+3. ai_addr --> the actual address
+x. ai_canonname --> full hostname
+
+
+When creating a socket I give it 2 of the 3 params -
+ai_family
+ai_socktype and ai_protocol
+
+When binding to a port I give it the remaining param -
+ai_addr (and ai_addrlen)
+
+struct addrinfo {
+    int              ai_flags;     // AI_PASSIVE, AI_CANONNAME, etc.
+    int              ai_family;    // AF_INET, AF_INET6, AF_UNSPEC
+    int              ai_socktype;  // SOCK_STREAM, SOCK_DGRAM
+    int              ai_protocol;  // use 0 for "any"
+    size_t           ai_addrlen;   // size of ai_addr in bytes
+    struct sockaddr *ai_addr;      // struct sockaddr_in or _in6
+    char            *ai_canonname; // full canonical hostname
+
+    struct addrinfo *ai_next;      // linked list, next node
+};
+ 

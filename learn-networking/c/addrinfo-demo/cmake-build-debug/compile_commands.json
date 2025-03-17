@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/cmake-build-debug",
+  "command": "/usr/bin/gcc   -Wall -g -fdiagnostics-color=always -o CMakeFiles/netlearn.dir/main.c.o -c /home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/main.c",
+  "file": "/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/main.c",
+  "output": "CMakeFiles/netlearn.dir/main.c.o"
+},
+{
+  "directory": "/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/cmake-build-debug",
+  "command": "/usr/bin/gcc   -Wall -g -fdiagnostics-color=always -o CMakeFiles/netlearn.dir/netutils.c.o -c /home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/netutils.c",
+  "file": "/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/netutils.c",
+  "output": "CMakeFiles/netlearn.dir/netutils.c.o"
+},
+{
+  "directory": "/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/cmake-build-debug",
+  "command": "/usr/bin/gcc   -Wall -g -fdiagnostics-color=always -o CMakeFiles/netlearn.dir/stringutils.c.o -c /home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/stringutils.c",
+  "file": "/home/avilay/projects/bitbucket/learn/learn-cs/learn-networking/c/addrinfo-demo/stringutils.c",
+  "output": "CMakeFiles/netlearn.dir/stringutils.c.o"
+}
+]
